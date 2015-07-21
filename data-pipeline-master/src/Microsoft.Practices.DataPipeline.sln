@@ -1,0 +1,81 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.31101.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{4958B0E7-E12B-42E3-93BB-1AC81429EE40}"
+	ProjectSection(SolutionItems) = preProject
+		..\.gitattributes = ..\.gitattributes
+		..\.gitignore = ..\.gitignore
+		..\LICENSE.txt = ..\LICENSE.txt
+		..\README.md = ..\README.md
+		Settings.StyleCop = Settings.StyleCop
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Shared", "Shared", "{57A3014D-1112-4364-8E2B-23D980DB7D35}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ColdStorage", "ColdStorage", "{8740EEEA-2D60-473B-AFC5-6E864DE546DD}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "RunFromConsole", "RunFromConsole", "{3A172F59-506A-4FC6-97ED-D9665E80D7B4}"
+	ProjectSection(SolutionItems) = preProject
+		RunFromConsole\mysettings.config = RunFromConsole\mysettings.config
+		RunFromConsole\README.md = RunFromConsole\README.md
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Provisioning", "Provisioning", "{7D22B8B7-4728-480D-98A1-352FB8440646}"
+	ProjectSection(SolutionItems) = preProject
+		Provisioning\CopyOutputToConfigFile.ps1 = Provisioning\CopyOutputToConfigFile.ps1
+		Provisioning\CopyOutputToServiceConfigFiles.ps1 = Provisioning\CopyOutputToServiceConfigFiles.ps1
+		Provisioning\CreateEventHub.ps1 = Provisioning\CreateEventHub.ps1
+		Provisioning\ProvisionAssets.ps1 = Provisioning\ProvisionAssets.ps1
+		Provisioning\ProvisionStorageAccount.ps1 = Provisioning\ProvisionStorageAccount.ps1
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Core", "Implementation\Shared\Core\Core.csproj", "{B3657B80-640F-4D72-885E-E9F9729BAC18}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tests.Common", "Implementation\Shared\Tests.Common\Tests.Common.csproj", "{769C50C0-1627-4834-824A-A77B2C303F9D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ColdStorage.ConsoleHost", "RunFromConsole\ColdStorage.ConsoleHost\ColdStorage.ConsoleHost.csproj", "{1E5949F1-8E52-4791-8FBE-CE38DBD00DC5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ColdStorage.EventProcessorHost", "Implementation\ColdStorage\ColdStorage.EventProcessorHost\ColdStorage.EventProcessorHost.csproj", "{6D15D1EF-A00C-4E2E-AEFB-6DA23BEA107F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ColdStorage.WorkerRole", "Implementation\ColdStorage\ColdStorage.WorkerRole\ColdStorage.WorkerRole.csproj", "{8D14C4FA-546E-49F7-9656-F61D3C12271B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B3657B80-640F-4D72-885E-E9F9729BAC18}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B3657B80-640F-4D72-885E-E9F9729BAC18}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B3657B80-640F-4D72-885E-E9F9729BAC18}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B3657B80-640F-4D72-885E-E9F9729BAC18}.Release|Any CPU.Build.0 = Release|Any CPU
+		{769C50C0-1627-4834-824A-A77B2C303F9D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{769C50C0-1627-4834-824A-A77B2C303F9D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{769C50C0-1627-4834-824A-A77B2C303F9D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{769C50C0-1627-4834-824A-A77B2C303F9D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1E5949F1-8E52-4791-8FBE-CE38DBD00DC5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1E5949F1-8E52-4791-8FBE-CE38DBD00DC5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1E5949F1-8E52-4791-8FBE-CE38DBD00DC5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1E5949F1-8E52-4791-8FBE-CE38DBD00DC5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6D15D1EF-A00C-4E2E-AEFB-6DA23BEA107F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6D15D1EF-A00C-4E2E-AEFB-6DA23BEA107F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6D15D1EF-A00C-4E2E-AEFB-6DA23BEA107F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6D15D1EF-A00C-4E2E-AEFB-6DA23BEA107F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8D14C4FA-546E-49F7-9656-F61D3C12271B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8D14C4FA-546E-49F7-9656-F61D3C12271B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8D14C4FA-546E-49F7-9656-F61D3C12271B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8D14C4FA-546E-49F7-9656-F61D3C12271B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{B3657B80-640F-4D72-885E-E9F9729BAC18} = {57A3014D-1112-4364-8E2B-23D980DB7D35}
+		{769C50C0-1627-4834-824A-A77B2C303F9D} = {57A3014D-1112-4364-8E2B-23D980DB7D35}
+		{1E5949F1-8E52-4791-8FBE-CE38DBD00DC5} = {3A172F59-506A-4FC6-97ED-D9665E80D7B4}
+		{6D15D1EF-A00C-4E2E-AEFB-6DA23BEA107F} = {8740EEEA-2D60-473B-AFC5-6E864DE546DD}
+		{8D14C4FA-546E-49F7-9656-F61D3C12271B} = {8740EEEA-2D60-473B-AFC5-6E864DE546DD}
+	EndGlobalSection
+EndGlobal
