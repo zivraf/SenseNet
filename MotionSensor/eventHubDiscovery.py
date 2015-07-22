@@ -1,11 +1,17 @@
-import sys, optparse, time, platform, urllib, socket
+import sys, optparse, time, platform, urllib, socket, ConfigParser
 from proton import *
 
 
-ehNamespace = "sensnet-ns"
-ehEntity = "discovery"
-ehUsername = "sender"
-ehPassword = urllib.quote_plus ("6NIfTGdWGFdQGO4NKEq6KFGIItq9V0+KdKHShhGbC2M=")
+Config = ConfigParser.ConfigParser()
+Config.read("appconfig.ini")
+location = Config.get(platform.node(),'Location')
+
+
+ehNamespace = Config.get("eventhub", "ehNamespace")
+ehEntity = Config.get("eventhub","ehEntity")
+ehUsername = Config.get("eventhub","ehUsername")
+ehPassword = urllib.quote_plus (Config.get("eventhub","ehPassword"))
+
 AMQP_CONN_STR = "amqps://"+ehUsername+":"+ehPassword+"@"+ehNamespace+".servicebus.windows.net/"+ehEntity
 
 s = socket.socket()
